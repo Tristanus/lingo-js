@@ -1,0 +1,9 @@
+th{
+	width: 100px;
+	height: 100px;
+	border: 1px solid black;
+}
+
+.letter{
+	font-size: 40px;
+}
