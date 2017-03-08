@@ -2,63 +2,33 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Lingo</title>
+	<title>LINGO</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="js/words-nl.js"></script>
 	<script type="text/javascript" src="js/lingo.js"></script>
 </head>
 <body>
-	
 	<h1>Lingo</h1>
-	<p>Lucille is een invalide rotpoot</p>
-	<p>Aantal pogingen over:
-		<script type="text/javascript">
-			document.write(guesses);
-		</script>
-	</p>
+	<p>Hallo en welkom bij lingo. Om te beginnen kies u eerst het aantal letters. Vervolgens klikt u op start om te beginnen.</p>
+	<div class="letter_block">
+		<span>Kies hier het aantal letters!</span>
+		<br/>
+		<input type="radio" name="letterAmount" value="5">5
+		<br/>
+		<input type="radio" name="letterAmount" value="6">6
+		<br/>
+		<input type="radio" name="letterAmount" value="7">7
+		<br/>
+		<input type="radio" name="letterAmount" value="8">8
+		<br/>
+		<br/>
+		<button onclick="letterAmount();createTable();" id="letter">start</button>
+		<br/>
+		<br/>
+	</div>
 
-	<form id="wordForm">
-		Woord: <input type="text" id="wordGuess">
-		<button onclick="check()">Antwoord</button>
-	</form>
+	<table id="lingo_table"></table>
 
-	<table>
-		<tr>
-			<th id="1.1"></th>
-			<th id="1.2"></th>
-			<th id="1.3"></th>
-			<th id="1.4"></th>
-			<th id="1.5"></th>
-		</tr>
-		<tr>
-			<th id="2.1"></th>
-			<th id="2.2"></th>
-			<th id="2.3"></th>
-			<th id="2.4"></th>
-			<th id="2.5"></th>
-		</tr>
-		<tr>
-			<th id="3.1"></th>
-			<th id="3.2"></th>
-			<th id="3.3"></th>
-			<th id="3.4"></th>
-			<th id="3.5"></th>
-		</tr>
-		<tr>
-			<th id="4.1"></th>
-			<th id="4.2"></th>
-			<th id="4.3"></th>
-			<th id="4.4"></th>
-			<th id="4.5"></th>
-		</tr>
-		<tr>
-			<th id="5.1"></th>
-			<th id="5.2"></th>
-			<th id="5.3"></th>
-			<th id="5.4"></th>
-			<th id="5.5"></th>
-		</tr>
-	</table>	
-
+	<input id="antwoord" type="text" placeholder="Vul hier uw antwoord in..." /><button onclick="checkLetters()">antwoord</button>
 </body>
 </html>

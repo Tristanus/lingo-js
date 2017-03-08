@@ -1,9 +1,29 @@
-th{
+body
+{
+	background-color: #E5E2DD;
+	font-family: calibri;
+	font-size: 22px;
+}
+.letter_block, h1, p
+{
+	margin-left: 20px;
+}
+#lingo_table
+{
+	border: solid black 1px;
+	border-collapse: collapse;
+	text-align: center;
+	font-size: 40px;
+	background-color: #78C2FF;
+	margin: auto;
+}
+#lingo_table tr td
+{
 	width: 100px;
 	height: 100px;
-	border: 1px solid black;
+	border: solid grey 5px;
 }
-
-.letter{
-	font-size: 40px;
+#antwoord
+{
+	margin-left: calc(50% - 121px);
 }
